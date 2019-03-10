@@ -1,0 +1,27 @@
+function setup() {
+  createCanvas(400, 400);
+  colorMode(HSB)
+}
+
+function draw() {
+  background(0);
+
+
+  //Buttons For Sound
+  for (var x = 50; x < width; x += 125) {
+    for (var y = 50; y < height; y += 125) {
+      fill(255, 100, 100)
+      square(x, y, 50);
+    }
+
+//Mouse Click Animation
+    if (mouseIsPressed) {
+      fill(100, 200, 400)
+      ellipse(mouseX, mouseY, 050, 050);
+    }
+
+
+
+
+  }
+}
