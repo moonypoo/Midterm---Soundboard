@@ -1,25 +1,121 @@
+function preload() {
+  soundFormats('mp3', 'ogg');
+  sound = loadSound('fart1.mp3');
+  sound = loadSound('fart2.mp3');
+  sound = loadSound('fart3.mp3');
+  sound = loadSound('fart4.mp3');
+  sound = loadSound('fart5.mp3');
+  sound = loadSound('fart6.mp3');
+  sound = loadSound('fart7.mp3');
+  sound = loadSound('fart8.mp3');
+  sound = loadSound('fart9.mp3');
+}
+
+
+
 function setup() {
   createCanvas(400, 400);
   colorMode(HSB)
 }
 
 function draw() {
-  background(0);
+  background(50);
+
+  // var x = []; // new empty array
+  // var y = []; // new empty array
+
+  // x.push(mouseX); // equivalent to append(x, mouseX)
+  // y.push(mouseY); // equivalent to append(y, mouseY)
+
+  // for (var i = 0; i < x.length; i = i + 20) {
+  // var w = 1 + (x.length - i);
+  //  //rect(x[i] - w/2, y[i] - w/2, w, w);
+  //  rect(x[i], y[i], w, w)
+  //  }
+
+  // x = x.slice(-250); // keep the last 50 x values
+  //  y = y.slice(-250); // keep the last 50 y values
+
+
 
 
   //Buttons For Sound
   for (var x = 50; x < width; x += 125) {
     for (var y = 50; y < height; y += 125) {
-      fill(255, 100, 100)
+      fill(150, 60, 150)
       square(x, y, 50);
+  }
+  }
+  //Mouse Click Animation
+  if (mouseIsPressed) {
+    fill(50, 20, 100)
+
+    //BOX1
+    if (mouseX > 50 && mouseX < 100 && mouseY > 50 && mouseY < 100) {
+      fill(20,80,100);
+      sound.setVolume(0.1);
+      sound.play(fart1.mp3);
     }
 
-//Mouse Click Animation
-    if (mouseIsPressed) {
-      fill(100, 200, 400)
-      ellipse(mouseX, mouseY, 050, 050);
+    //BOX2
+    if (mouseX > 175 && mouseX < 225 && mouseY > 50 && mouseY < 100) {
+      fill(20, 80, 100);
+      sound.setVolume(0.1);
+      sound.play(fart2.mp3);
     }
 
+    //BOX3
+    if (mouseX > 300 && mouseX < 350 && mouseY > 50 && mouseY < 100) {
+      fill(20, 80, 100);
+      sound.setVolume(0.1);
+      sound.play(fart3.mp3);
+    }
+
+    //BOX4
+    if (mouseX > 50 && mouseX < 100 && mouseY > 175 && mouseY < 225) {
+      fill(20, 80, 100);
+      sound.setVolume(0.1);
+      sound.play(fart4.mp3);
+    }
+
+
+    //BOX5
+    if (mouseX > 175 && mouseX < 225 && mouseY > 175 && mouseY < 225) {
+      fill(20, 80, 100);
+      sound.setVolume(0.1);
+      sound.play(fart5.mp3);
+    }
+
+    //BOX6
+    if (mouseX > 300 && mouseX < 350 && mouseY > 175 && mouseY < 225) {
+      fill(20, 80, 100);
+     // sound.setVolume(0.1);
+       // sound.play(fart6.mp3);
+    }
+
+    //BOX7
+    if (mouseX > 50 && mouseX < 100 && mouseY > 300 && mouseY < 350) {
+      fill(20, 80, 100);
+    //  sound.setVolume(0.1);
+    // sound.play(fart7.mp3);
+    }
+
+    //BOX8
+    if (mouseX > 175 && mouseX < 225 && mouseY > 300 && mouseY < 350) {
+      fill(20, 80, 100);
+     // sound.setVolume(0.1);
+        // sound.play(fart8.mp3);
+    }
+
+    //BOX9
+    if (mouseX > 300 && mouseX < 350 && mouseY > 300 && mouseY < 350) {
+      fill(20, 80, 100);
+     // sound.setVolume(0.1);
+    // sound.play(fart9.mp3);
+    }
+
+
+    ellipse(mouseX, mouseY, 50, 50);
 
 
 
